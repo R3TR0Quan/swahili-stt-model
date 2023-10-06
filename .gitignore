@@ -160,7 +160,7 @@ cython_debug/
 #.idea/
 
 #Data folder
-cv-corpus-15.0-2023-09-08-sw/*
+sw/*
 
 # VS-Code
 .vscode
