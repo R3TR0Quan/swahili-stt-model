@@ -1,0 +1,6 @@
+model_checkpoint_path: "train-100"
+all_model_checkpoint_paths: "train-96"
+all_model_checkpoint_paths: "train-97"
+all_model_checkpoint_paths: "train-98"
+all_model_checkpoint_paths: "train-99"
+all_model_checkpoint_paths: "train-100"
