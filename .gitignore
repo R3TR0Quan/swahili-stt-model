@@ -161,6 +161,10 @@ cython_debug/
 
 #Data folder
 sw/*
+sw.zip
+train/
+test/
+dev/
 
 # VS-Code
 .vscode
