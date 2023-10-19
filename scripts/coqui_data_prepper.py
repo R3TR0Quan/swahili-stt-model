@@ -38,7 +38,7 @@ def format_df(train_df):
     wav_filename = wav_filepath.split("/")[-1]
 
     # Add the prefix .wav to the filename.
-    wav_filename = wav_filename.replace(".mp3", "") + ".wav"
+    # wav_filename = wav_filename.replace(".mp3", "") + ".wav"
 
 
     # Get the size of the waveform file in bytes.
