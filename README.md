@@ -19,8 +19,23 @@ python scripts/decode_resample.py   --manifest=sw/train.json   --destination_fol
 Do this for train, dev and test data sets
 ## Replicating results
 
+### Setup
 The current version of Coqui-STT used in this project depends on Tensorflow 1.15.4. To replicate create a new env in python3.7 and install the packages in *requirements.txt*
 
 ```
 pip install -r requirements.txt
+```
+
+### Evaluation
+The model was evluated on a dataset from zindi for the MCVxAfrica's Talking Hackathon.
+To download it and extract it to the `sw/` directory of this repo. You can then run:
+```
+python3 -m scripts/mp3-2-wav.py sw/eval/ 
+```
+to convert the evaluation, and for that matter any folder of .mp3 files to .wav
+
+You can then run the transcription script dictated in coqui-stt documentation.
+To format the submission for the hackathon, run:
+```
+python3 scripts/format_submission.py
 ```
