@@ -1,5 +1,10 @@
 import csv
 import os
+import yaml
+
+#load env variables from yaml
+with open('config.yaml', 'r') as conf:
+    env_vars = yaml.safe_load(conf)
 
 tlog_dir = "sw/tlogs"  # Path to the directory containing the .tlog files
 csv_file = "sw/submission.csv"  # Path to the output CSV file
