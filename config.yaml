@@ -1,0 +1,6 @@
+SUBMISSION_CSV: 'sw/submission.csv'
+TLOGS_DIR: 'sw/tlogs'
+EVAL_DIR: 'sw/eval'
+TRAIN_DIR: 'sw/train'
+DEV_DIR: 'sw/dev_dir'
+TEST_DIR: 'sw/test'
