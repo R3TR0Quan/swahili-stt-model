@@ -18,12 +18,15 @@ def convert_mp3_to_wav(directory):
         # Load MP3 file
         audio = AudioSegment.from_mp3(mp3_path)
 
+        # Resample to 16kHz
+        audio = audio.set_frame_rate(16000)
+
         # Export as WAV
         audio.export(wav_path, format='wav')
 
         print(f"Converted {mp3_file} to {wav_file}")
 
-        # Delete the MP3 file
+        # Delete the MP3 fil
         os.remove(mp3_path)
         print(f"Deleted {mp3_file}")
 

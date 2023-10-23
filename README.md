@@ -30,12 +30,18 @@ pip install -r requirements.txt
 The model was evluated on a dataset from zindi for the MCVxAfrica's Talking Hackathon.
 To download it and extract it to the `sw/` directory of this repo. You can then run:
 ```
-python3 -m scripts/mp3-2-wav.py sw/eval/ 
+python3 -m scripts/mp3-2-wav.py sw/test/ 
 ```
 to convert the evaluation, and for that matter any folder of .mp3 files to .wav
 
-You can then run the transcription script dictated in coqui-stt documentation.
-To format the submission for the hackathon, run:
+To transcribe the eval set use the command:
 ```
-python3 scripts/format_submission.py
+python scripts/multiprocess_transcribe.py
+```
+this will run multiple transcription tasks on the set
+
+You can then run the transcription script dictated in coqui-stt documentation.
+To format the submission for the hackathon, assuming the data directories are well set up, run:
+```
+python3 scripts/format_sub.py
 ```
