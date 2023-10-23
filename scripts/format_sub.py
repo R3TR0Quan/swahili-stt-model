@@ -6,14 +6,14 @@ import yaml
 with open('config.yaml', 'r') as conf:
     env_vars = yaml.safe_load(conf)
 
-tlog_dir = "sw/tlogs"  # Path to the directory containing the .tlog files
-csv_file = "sw/submission.csv"  # Path to the output CSV file
+TLOGS_DIR = env_vars['TLOGS_DIR']# Path to the directory containing the .tlog files
+SUBMISSION_CSV = env_vars['SUBMISSION_CSV']# Path to the output CSV file
 
 data = []
 
-for filename in os.listdir(tlog_dir):
+for filename in os.listdir(TLOGS_DIR):
     if filename.endswith('.tlog'):
-        file_path = os.path.join(tlog_dir, filename)
+        file_path = os.path.join(TLOGS_DIR, filename)
         
         # Open the .tlog file and read the sentence
         with open(file_path, 'r') as file:
@@ -24,7 +24,7 @@ for filename in os.listdir(tlog_dir):
         
         # Append the row to the data list
         data.append(row)
-with open(csv_file, 'w', newline='') as file:
+with open(SUBMISSION_CSV, 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['path', 'sentence'])  # Write the header row
     writer.writerows(data)  # Write the data rows

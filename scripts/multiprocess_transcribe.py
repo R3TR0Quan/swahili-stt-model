@@ -2,10 +2,18 @@ import os
 import glob
 import subprocess
 from multiprocessing import Pool
+import yaml
+
+#load env variables from yaml
+with open('config.yaml', 'r') as conf:
+    env_vars = yaml.safe_load(conf)
+
+EVAL_DIR = env_vars['EVAL_DIR']
+TLOGS_DIR = env_vars['TLOGS_DIR']
 
 # Set the paths for the input audio files and the output directory
-input_dir = 'sw/test'
-output_dir = 'sw/tlogs'
+input_dir = EVAL_DIR
+output_dir = TLOGS_DIR
 
 # Get a list of all .wav files in the input directory
 audio_files = glob.glob(os.path.join(input_dir, '*.wav'))
