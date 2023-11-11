@@ -10,6 +10,7 @@ with open('config.yaml', 'r') as conf:
 
 EVAL_DIR = env_vars['EVAL_DIR']
 TLOGS_DIR = env_vars['TLOGS_DIR']
+MODEL = env_vars['MODEL_PATH']
 
 # Set the paths for the input audio files and the output directory
 input_dir = EVAL_DIR
@@ -24,7 +25,7 @@ def run_inference(audio_file):
     output_file = os.path.join(output_dir, os.path.splitext(os.path.basename(audio_file))[0]+ '.tlog')
     
     # Run the Coqui STT inference command
-    command = f"stt --model models/output_graph.tflite --audio {audio_file} > {output_file}"
+    command = f"stt --model {MODEL} --audio {audio_file} > {output_file}"
     subprocess.run(command, shell=True)
 
     print(f"Inference completed for {audio_file}. Output saved to {output_file}")

@@ -1,6 +1,14 @@
+CHECKPOINT_DIR: 'ckpt_dir'
 SUBMISSION_CSV: 'sw/submission.csv'
 TLOGS_DIR: 'sw/tlogs'
 EVAL_DIR: 'sw/eval'
-TRAIN_DIR: 'sw/train'
-DEV_DIR: 'sw/dev_dir'
-TEST_DIR: 'sw/test'
+TRAIN_FILES: 'sw/train.csv'
+DEV_FILES: 'sw/dev.csv'
+TEST_FILES: 'sw/test.csv'
+EXPORT_DIR: 'models/'
+MODEL_PATH: 'models/model_1.tflite'
+# Training variables
+EPOCHS: 12
+GLOB_BATCH_SIZE: 10
+LEARING_RATE: 0.01
+# Transcription
