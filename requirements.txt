@@ -98,7 +98,7 @@ sox==1.4.1
 SQLAlchemy==2.0.22
 stt==1.4.0
 tensorboard==1.15.0
-tensorflow==1.15.4
+tensorflow==2.12.1
 tensorflow-estimator==1.15.1
 termcolor==2.3.0
 tornado==6.2
